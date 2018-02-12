@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Proyecto parcial</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <!--etiqueta para acentos y ñ s-->
+        <meta name="viewport" content="with=device-with, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="estilos.css">
+	</head>
+	<body>  
+		<header>
+            <h1 class="container">Proyecto parcial 1</h1>
+            <ul class="container">
+                <li><a href="http://127.0.0.1:50807/proyectoparcial.html">Pagina principal</a></li>
+
+            </ul>
+        </header>
+        <br>
+        <article class="container parr1">
+            <p>
+                Instrucciones: Llena la tabla con sus respectivos valores ( T, F, t, f ) y presiona check para verificar tus respuestas.
+            </p>
+            <p><b>Negación</b></p>
+            <table class="table table-bordered ">
+                <tr>
+                    <th>P</th>
+                    <th>~P</th>
+                    <th>check</th>
+                </tr>
+                <tr>
+                    <td>T</td>
+                    <td><input type="text" id="not1"></td>
+                    <td><p id="not1ch"></p></td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td><input type="text" id="not2"></td>
+                    <td><p id="not2ch"></p></td>
+                </tr>
+            </table>
+            <input type="button" class="btn btn-info" name="checar" value="checar" id="bnot">
+            <br>
+            <br>
+            <p><b>Disyunción</b></p>
+            <table class="table table-bordered ">
+                <tr>
+                    <th>P</th>
+                    <th>Q</th>
+                    <th>P o Q</th>
+                    <th>check</th>
+                </tr>
+                <tr>
+                    <td>T</td>
+                    <td>F</td>
+                    <td><input type="text" id="dis1"></td>
+                    <td><p id="dis1ch"></p></td>
+                </tr>
+                <tr>
+                    <td>T</td>
+                    <td>T</td>
+                    <td><input type="text" id="dis2"></td>
+                    <td><p id="dis2ch"></p></td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>F</td>
+                    <td><input type="text" id="dis3"></td>
+                    <td><p id="dis3ch"></p></td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>T</td>
+                    <td><input type="text" id="dis4"></td>
+                    <td><p id="dis4ch"></p></td>
+                </tr>
+            </table>
+            <input type="button" class="btn btn-info" name="checar" value="checar" id="bdis">
+            <br>
+            <br>
+            <p><b>Conjunción</b></p>
+            <table class="table table-bordered ">
+                <tr>
+                    <th>P</th>
+                    <th>Q</th>
+                    <th>P y Q</th>
+                    <th>check</th>
+                </tr>
+                <tr>
+                    <td>T</td>
+                    <td>F</td>
+                    <td><input type="text" id="con1"></td>
+                    <td><p id="con1ch"></p></td>
+                </tr>
+                <tr>
+                    <td>T</td>
+                    <td>T</td>
+                    <td><input type="text" id="con2"></td>
+                    <td><p id="con2ch"></p></td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>F</td>
+                    <td><input type="text" id="con3"></td>
+                    <td><p id="con3ch"></p></td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>T</td>
+                    <td><input type="text" id="con4"></td>
+                    <td><p id="con4ch"></p></td>
+                </tr>
+            </table>
+            <input type="button" class="btn btn-info" name="checar" value="checar" id="bcon">
+            <br>
+            <br>
+            <p><b>Condicional</b></p>
+            <table class="table table-bordered ">
+                <tr>
+                    <th>P</th>
+                    <th>Q</th>
+                    <th>P → Q</th>
+                    <th>check</th>
+                </tr>
+                <tr>
+                    <td>T</td>
+                    <td>F</td>
+                    <td><input type="text" id="co1"></td>
+                    <td><p id="co1ch"></p></td>
+                </tr>
+                <tr>
+                    <td>T</td>
+                    <td>T</td>
+                    <td><input type="text" id="co2"></td>
+                    <td><p id="co2ch"></p></td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>F</td>
+                    <td><input type="text" id="co3"></td>
+                    <td><p id="co3ch"></p></td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>T</td>
+                    <td><input type="text" id="co4"></td>
+                    <td><p id="co4ch"></p></td>
+                </tr>
+            </table>
+            <input type="button" class="btn btn-info" name="checar" value="checar" id="bco">
+        </article>
+        <footer></footer>
+        <script type="text/javascript" src="ProyectoParcial1.js"></script>
+	</body>
+</html>
