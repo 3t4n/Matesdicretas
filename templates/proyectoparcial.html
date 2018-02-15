@@ -6,6 +6,19 @@
         <meta name="viewport" content="with=device-with, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/estilos.css">
+ 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
+       <script src="http://malsup.github.com/jquery.form.js"></script> 
+	<script>
+	
+	$(document).ready(function() { 
+	    $('#simplificador').ajaxForm({ 
+		target: '#res', 
+		success: function() { 
+		    $('#res').fadeIn('slow'); 
+		} 
+	    }); 
+	});
+	</script>
 	</head>
 	<body>  
 		<header class="container">
@@ -62,6 +75,14 @@
                 <p>
                     <a href="../TablasDeVerdad">Ejercicios</a>
                 </p>
+		<h3> Simplicar </h3>
+		<form  id="simplificador"action="/boolean" method="post">
+		<input name="varsb" type="text">
+		<input name="expresion" type="text">
+		<input name="Simplificar" type="submit">
+		</form>
+		<div id="res">
+		</div>
             </div>
             <br>
             <div class="parr1" id="tv">

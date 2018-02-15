@@ -4,17 +4,20 @@ import boolean
 app = Flask(__name__, static_url_path='')
 algebra = boolean.BooleanAlgebra()
 
-@app.route('/<varsb>/<expression>')
-def booleansimplification(varsb,expression):
-    tempvar = list(varsb)
-    str1 = ""
-    str2 = ""
-    for element in tempvar:
-        str1 += element+","
-        str2 += "\"" +element+"\","
-    exec(str1+"=algebra.symbols("+str2+")")
-    exec("ret = str(("+expression+").simplify())")
-    return ret
+@app.route('/boolean', methods=['POST', 'GET'])
+def booleansimplification():
+    if request.method == 'POST':
+        tempvar = list(request.form['varsb'])
+        str1 = ""
+        str2 = ""
+        for element in tempvar:
+            str1 += element+","
+            str2 += "\"" +element+"\","
+        exec(str1+"=algebra.symbols("+str2+")")
+        exec("ret = str(("+request.form['expresion']+").simplify())")
+        return ret
+    else:
+        return "Nope"
 
 @app.route('/<string:page_name>/')
 def static_page(page_name):
